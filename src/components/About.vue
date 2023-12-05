@@ -59,56 +59,31 @@
   <!-- .page-section -->
 
   <div class="bg-green-50 page-section">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-6 p-4 -mt-9 lg:mt-0">
-          <h2 class="title-section text-2xl">
-            My
-            <span class="marked">Skills & Experiences</span>
+    <div class="container mt-5 w-50">
+      <h2 class="title-section text-2xl">
+            Contactanos a traves de este 
+            <span class="marked">formulario</span>
           </h2>
           <div class="divider"></div>
-          <p class="mb-4">
-            I graduated from Chonnam National University three months ago with a
-            bachelor’s in Computer Engineering. My experiences in school gave me
-            strong communication and networking skills, which are crucial for
-            event planning.
-          </p>
-          <p class="mb-4">
-            I create successful responsive websites that are fast, easy to use,
-            and built with best practices. The main area of my expertise is
-            front-end development, HTML, CSS, JS, building small and simple web
-            apps,features, animations, and coding interactive. layouts.
-          </p>
-
-          <p class="mb-5 hidden lg:flex">
-            I also have experiences with building Nft Smart Contract and
-            Blockchain Solutions as freelancer developer in South Korea. Since
-            beginning my journey as a freelance developer nearly 10 months ago,
-            I’ve done remote work for agencies, consulted for startups, and
-            collaborated with talented people to create Nfts,Smart Contracts and
-            Dapps for both business and consumer use.
-          </p>
-
-          <router-link to="/blog" class="btn btn-primary">My Blogs</router-link>
-          <router-link to="/projects" class="btn btn-outline ml-2">
-            My Projects
-          </router-link>
+      <form @submit.prevent="submitForm">
+        <div class="mb-3">
+          <label for="name" class="form-label">Nombre:</label>
+          <input v-model="formData.name" type="text" class="form-control" id="name" required>
         </div>
-        <div class="col-lg-6 py-3 wow zoomIn">
-          <div class="img-place text-center">
-            <lottie-player
-              src="https://assets2.lottiefiles.com/packages/lf20_u4jjb9bd.json"
-              background="transparent"
-              speed="0.5"
-              style="max-width: 550px; max-height: 550px"
-              loop
-              autoplay></lottie-player>
-          </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">Correo Electrónico:</label>
+          <input v-model="formData.email" type="email" class="form-control" id="email" required>
         </div>
-      </div>
+        <div class="mb-3">
+          <label for="message" class="form-label">Mensaje:</label>
+          <textarea v-model="formData.message" class="form-control" id="message" rows="4" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary  t">Enviar Mensaje</button>
+      </form>
     </div>
     <!-- .container -->
-  </div>
+  </div> 
+  
 </template>
 
 <script>
@@ -116,10 +91,19 @@ export default {
   data() {
     return {
       scrollPosition: 0,
+      formData: {
+        name: "",
+        email: "",
+        message: "",
+      },
     };
   },
 
   methods: {
+    submitForm() {
+      // Aquí puedes manejar la lógica de envío del formulario
+      console.log('Formulario enviado:', this.formData);
+    },
     handleScroll(e) {
       this.scrollPosition = e.target.scrollTop;
 

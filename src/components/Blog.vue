@@ -2,68 +2,69 @@
   <div class="bg-green-50 page-section py-5">
     <div class="container">
       <div class="text-center wow fadeInUp">
-        <div class="mt-2 subhead">Popular Blog</div>
+        <div class="mt-2 subhead">Precios</div>
         <h2 class="title-section">
-          Read My Latest
-          <span class="">Blogs</span>
+          Mira los ultimos
+          <span class="">Precios</span>
         </h2>
         <div class="divider mx-auto"></div>
       </div>
 
-      <div class="row my-5 card-blog-row">
-        <div class="col-md-6 col-lg-3 py-3 wow fadeInUp hover:-mt-3">
-          <div class="card-blog">
-            <div class="header">
-              <div class="entry-footer">
-                <div class="post-author">Welcome to the Blogs</div>
-                <a href="#" class="post-date"></a>
+      <div class="row my-5   p-5">
+         
+          <div class="col">
+            <div class="card mb-4 rounded-3 shadow-sm">
+              <div class="card-header py-3">
+                <h4 class="my-0 fw-normal">Free</h4>
               </div>
-            </div>
-            <div class="body">
-              <div class="post-title">
-                <a>
-                  Share My Knowledge
-                  <br />
-                  Research Skills
-                  <br />
-                  Makes More Employable
-                </a>
+              <div class="card-body">
+                <h1 class="card-title pricing-card-title">$0<small class="text-body-secondary fw-light">/mo</small></h1>
+                <ul class="list-unstyled mt-3 mb-4">
+                  <li>10 users included</li>
+                  <li>2 GB of storage</li>
+                  <li>Email support</li>
+                  <li>Help center access</li>
+                </ul>
+                <button type="button" class="w-100 btn btn-lg btn-outline-primary">Sign up for free</button>
               </div>
-            </div>
-            <div class="footer"></div>
-          </div>
-        </div>
-
-        <div
-          v-for="(a, i) in 3"
-          :key="a"
-          class="col-md-6 col-lg-3 py-3 wow fadeInUp hover:-mt-3">
-          <div class="bg-white card-blog">
-            <div class="header">
-              <div class="avatar">
-                <img :src="blog[i].profile" />
-              </div>
-              <div class="entry-footer">
-                <div class="post-author">{{ blog[i].username }}</div>
-                <a class="post-date">{{ blog[i].date }}</a>
-              </div>
-            </div>
-            <div class="body">
-              <div class="post-title">
-                <a>{{ blog[i].title }}</a>
-              </div>
-              <div class="post-excerpt">
-                {{ blog[i].intro }}
-              </div>
-            </div>
-            <div class="footer">
-              <a href="https://prmblogs.tistory.com/">
-                Read More
-                <span class="mai-chevron-forward text-sm"></span>
-              </a>
             </div>
           </div>
-        </div>
+          <div class="col">
+            <div class="card mb-4 rounded-3 shadow-sm">
+              <div class="card-header py-3">
+                <h4 class="my-0 fw-normal">Pro</h4>
+              </div>
+              <div class="card-body">
+                <h1 class="card-title pricing-card-title">$15<small class="text-body-secondary fw-light">/mo</small></h1>
+                <ul class="list-unstyled mt-3 mb-4">
+                  <li>20 users included</li>
+                  <li>10 GB of storage</li>
+                  <li>Priority email support</li>
+                  <li>Help center access</li>
+                </ul>
+                <button type="button" class="w-100 btn btn-lg btn-primary">Get started</button>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card mb-4 rounded-3 shadow-sm border-success">
+              <div class="card-header py-3 text-bg-success border-success">
+                <h4 class="my-0 fw-normal">Enterprise</h4>
+              </div>
+              <div class="card-body">
+                <h1 class="card-title pricing-card-title">$29<small class="text-body-secondary fw-light">/mo</small></h1>
+                <ul class="list-unstyled mt-3 mb-4">
+                  <li>30 users included</li>
+                  <li>15 GB of storage</li>
+                  <li>Phone and email support</li>
+                  <li>Help center access</li>
+                </ul>
+                <button type="button" class="w-100 btn btn-lg btn-primary">Contact us</button>
+              </div>
+            </div>
+          </div>
+ 
+         
       </div>
 
       <div class="text-center pb-5">
