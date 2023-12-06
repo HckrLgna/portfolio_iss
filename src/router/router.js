@@ -19,7 +19,7 @@ import Upload from "../firebase/Upload.vue";
 
 
 const routes = [{
-        path: "/",
+        path: "/portfolio_iss",
         component: Home,
     },
     {
