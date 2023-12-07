@@ -65,21 +65,24 @@
             <span class="marked">formulario</span>
           </h2>
           <div class="divider"></div>
-      <form @submit.prevent="submitForm">
-        <div class="mb-3">
-          <label for="name" class="form-label">Nombre:</label>
-          <input v-model="formData.name" type="text" class="form-control" id="name" required>
-        </div>
-        <div class="mb-3">
-          <label for="email" class="form-label">Correo Electrónico:</label>
-          <input v-model="formData.email" type="email" class="form-control" id="email" required>
-        </div>
-        <div class="mb-3">
-          <label for="message" class="form-label">Mensaje:</label>
-          <textarea v-model="formData.message" class="form-control" id="message" rows="4" required></textarea>
-        </div>
-        <button type="submit" class="btn btn-primary  t">Enviar Mensaje</button>
-      </form>
+
+          <form :action="formAction" method="POST" >
+            <div class="mb-3">
+              <label for="name" class="form-label">Nombre:</label>
+              <input v-model="formData.name" type="text" class="form-control" id="name" name="name" required>
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Correo Electrónico:</label>
+              <input v-model="formData.email" type="email" class="form-control" id="email" name="email" required>
+            </div>
+            <div class="mb-3">
+              <label for="message" class="form-label">Mensaje:</label>
+              <textarea v-model="formData.message" class="form-control" id="message" rows="4" name="comments" required></textarea>
+            </div>
+            <button type="submit" class="btn bg-success">Enviar Mensaje</button>
+            <input type="hidden" name="_next" value="http://localhost:8080">
+            <input type="hidden" name="_captcha" value="false">
+          </form>
     </div>
     <!-- .container -->
   </div> 
@@ -87,6 +90,7 @@
 </template>
 
 <script>
+
 export default {
   data() {
     return {
@@ -96,6 +100,7 @@ export default {
         email: "",
         message: "",
       },
+      formAction: 'https://formsubmit.co/e8d618d0a818dfb00b77846d97b231bc',
     };
   },
 
@@ -103,6 +108,10 @@ export default {
     submitForm() {
       // Aquí puedes manejar la lógica de envío del formulario
       console.log('Formulario enviado:', this.formData);
+      try {
+      } catch (error) {
+        console.error(error)
+      }
     },
     handleScroll(e) {
       this.scrollPosition = e.target.scrollTop;
@@ -116,5 +125,3 @@ export default {
   },
 };
 </script>
-
-<style></style>
