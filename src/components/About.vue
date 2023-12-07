@@ -80,7 +80,7 @@
               <textarea v-model="formData.message" class="form-control" id="message" rows="4" name="comments" required></textarea>
             </div>
             <button type="submit" class="btn bg-success">Enviar Mensaje</button>
-            <input type="hidden" name="_next" value="http://localhost:8080">
+            <input type="hidden" name="_next" value="https://hckrlgna.github.io/portfolio_iss/">
             <input type="hidden" name="_captcha" value="false">
           </form>
     </div>
