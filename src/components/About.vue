@@ -9,7 +9,8 @@
               background="transparent"
               speed="1"
               style="max-width: 500px; max-height: 500px"
-              autoplay></lottie-player>
+              autoplay
+            ></lottie-player>
           </div>
         </div>
 
@@ -22,12 +23,10 @@
 
           <div>
             <p>
-              Somos un grupo de desarrolladores apasionados 
-              por la innovacion trabajamos con tecnologias 
-              a la vanguardia creando soluciones a la talla
-              de cualquier necesidad, llevamos mas de un año
-              trabajando con soluciones que conllevan inteligencia
-              artificial.
+              Somos un grupo de desarrolladores apasionados por la innovacion
+              trabajamos con tecnologias a la vanguardia creando soluciones a la
+              talla de cualquier necesidad, llevamos mas de un año trabajando
+              con soluciones que conllevan inteligencia artificial.
             </p>
           </div>
 
@@ -61,36 +60,68 @@
   <div class="bg-green-50 page-section">
     <div class="container mt-5 w-50">
       <h2 class="title-section text-2xl">
-            Contactanos a traves de este 
-            <span class="marked">formulario</span>
-          </h2>
-          <div class="divider"></div>
+        Contactanos a traves de este
+        <span class="marked">formulario</span>
+      </h2>
+      <div class="divider"></div>
 
-          <form :action="formAction" method="POST" >
-            <div class="mb-3">
-              <label for="name" class="form-label">Nombre:</label>
-              <input v-model="formData.name" type="text" class="form-control" id="name" name="name" required>
-            </div>
-            <div class="mb-3">
-              <label for="email" class="form-label">Correo Electrónico:</label>
-              <input v-model="formData.email" type="email" class="form-control" id="email" name="email" required>
-            </div>
-            <div class="mb-3">
-              <label for="message" class="form-label">Mensaje:</label>
-              <textarea v-model="formData.message" class="form-control" id="message" rows="4" name="comments" required></textarea>
-            </div>
-            <button type="submit" class="btn bg-success">Enviar Mensaje</button>
-            <input type="hidden" name="_next" value="https://hckrlgna.github.io/portfolio_iss/">
-            <input type="hidden" name="_captcha" value="false">
-          </form>
+      <form :action="formAction" method="POST">
+        <div class="mb-3">
+          <label for="name" class="form-label">Nombre:</label>
+          <input
+            v-model="formData.name"
+            type="text"
+            class="form-control"
+            id="name"
+            name="name"
+            required
+          />
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">Correo Electrónico:</label>
+          <input
+            v-model="formData.email"
+            type="email"
+            class="form-control"
+            id="email"
+            name="email"
+            required
+          />
+        </div>
+        <div class="mb-3">
+          <label for="message" class="form-label">Mensaje:</label>
+          <textarea
+            v-model="formData.message"
+            class="form-control"
+            id="message"
+            rows="4"
+            name="comments"
+            required
+          ></textarea>
+        </div>
+        <button type="submit" class="btn bg-success">Enviar Mensaje</button>
+        <input
+          type="hidden"
+          name="_next"
+          value="https://hckrlgna.github.io/portfolio_iss/"
+        />
+        <input type="hidden" name="_captcha" value="false" />
+        <div class="w-10 h-10">
+          <a
+            href="https://api.whatsapp.com/send?phone=60817070"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/WhatsApp_icon.png/598px-WhatsApp_icon.png" alt="WhatsApp Logo" />
+          </a>
+        </div>
+      </form>
     </div>
     <!-- .container -->
-  </div> 
-  
+  </div>
 </template>
 
 <script>
-
 export default {
   data() {
     return {
@@ -100,17 +131,17 @@ export default {
         email: "",
         message: "",
       },
-      formAction: 'https://formsubmit.co/e8d618d0a818dfb00b77846d97b231bc',
+      formAction: "https://formsubmit.co/e8d618d0a818dfb00b77846d97b231bc",
     };
   },
 
   methods: {
     submitForm() {
       // Aquí puedes manejar la lógica de envío del formulario
-      console.log('Formulario enviado:', this.formData);
+      console.log("Formulario enviado:", this.formData);
       try {
       } catch (error) {
-        console.error(error)
+        console.error(error);
       }
     },
     handleScroll(e) {
